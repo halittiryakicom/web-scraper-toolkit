@@ -1,26 +1,89 @@
-# Core HTTP Requests
-requests>=2.32.0
+🚀 Python Web Scraper Roadmap (v1.0)
 
-# HTML Parsing
-beautifulsoup4>=4.13.0
-lxml>=6.0.0
+## 🎯 MVP (v0.1)
 
-# Browser Automation
-selenium>=4.34.0
-webdriver-manager>=4.0.2
+- [x] Create GitHub repository
+- [x] Professional README
+- [x] MIT License
+- [x] .gitignore
+- [x] requirements.txt
+- [x] Initial project structure
 
-# Data Processing
-pandas>=2.3.0
-openpyxl>=3.1.5
+---
 
-# Desktop GUI
-PySide6>=6.9.0
+## 🌐 Core Features
 
-# Environment Variables
-python-dotenv>=1.1.0
+- [ ] Scrape a single webpage
+- [ ] CSS Selector support
+- [ ] XPath support
+- [ ] Custom User-Agent
+- [ ] Request timeout handling
+- [ ] Error handling
 
-# Progress Bar
-tqdm>=4.67.0
+---
 
-# Logging
-loguru>=0.7.3
+## 📊 Export
+
+- [ ] CSV Export
+- [ ] Excel Export
+- [ ] JSON Export
+
+---
+
+## ⚙️ Automation
+
+- [ ] Multiple URL processing
+- [ ] Batch scraping
+- [ ] Retry failed requests
+- [ ] Scheduled scraping
+
+---
+
+## 🖥️ GUI (v0.5)
+
+- [ ] PySide6 interface
+- [ ] URL input
+- [ ] Progress bar
+- [ ] Log panel
+- [ ] Export options
+
+---
+
+## ⭐ v1.0
+
+- [ ] Multi-page crawling
+- [ ] Proxy support
+- [ ] Selenium integration
+- [ ] BeautifulSoup integration
+- [ ] Robots.txt awareness
+- [ ] Project settings
+- [ ] Release v1.0
+
+---
+
+# 🎯 Priorities
+
+## 🔴 High Priority
+
+- [ ] Repository
+- [ ] README
+- [ ] Single page scraping
+- [ ] CSV Export
+
+## 🟠 Medium Priority
+
+- [ ] GUI
+- [ ] Excel Export
+- [ ] Multiple URLs
+
+## 🟢 Low Priority
+
+- [ ] Proxy
+- [ ] Selenium
+- [ ] Scheduler
+
+---
+
+# 📌 Main Goal
+
+"Extract structured data from websites quickly and reliably."
