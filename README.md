@@ -1,4 +1,3 @@
-# Web Scraper Toolkit 
 # 🌐 Web Scraper Toolkit
 
 A modern Python desktop application for extracting, processing, and exporting web data with an intuitive graphical interface.
@@ -6,7 +5,7 @@ A modern Python desktop application for extracting, processing, and exporting we
 ![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
 ![PySide6](https://img.shields.io/badge/PySide6-GUI-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Status](https://img.shields.io/badge/Status-In%20Development-orange)
+![Status](https://img.shields.io/badge/Status-MVP-brightgreen)
 
 ---
 
@@ -14,54 +13,56 @@ A modern Python desktop application for extracting, processing, and exporting we
 
 Web Scraper Toolkit is a Python-based desktop application designed to simplify web data extraction.
 
-Instead of writing custom scraping scripts for every website, users can configure scraping tasks through a modern graphical interface and export collected data in multiple formats.
+Instead of writing a custom scraping script for every website, you point it at one or many URLs, give it a CSS selector or an XPath expression, and it extracts the matching text (or attribute, e.g. `href`) from each page and exports the results to CSV, Excel or JSON.
 
-The project focuses on usability, clean architecture, and automation while providing a scalable foundation for future web scraping projects.
+The project focuses on usability, clean architecture, and reliability — one bad URL never stops a batch, and every request respects the target site's `robots.txt` by default.
 
 ---
 
-## ✨ Planned Features
+## ✨ Features
 
-- 🌐 Single Page Scraping
-- 🔍 CSS Selector Support
-- 📌 XPath Support
+- 🌐 Single-page and multi-page (batch) scraping — one URL per line
+- 🔍 CSS Selector support
+- 📌 XPath support (including expressions that select an attribute directly, e.g. `//a/@href`)
+- 🏷️ Extract an element's text, or a specific attribute (e.g. `href`, `src`)
 - 📄 Export to CSV
 - 📊 Export to Excel
 - 📦 Export to JSON
-- ⚡ Batch Processing
-- 🖥️ Modern PySide6 Interface
-- 📈 Progress Tracking
-- 📝 Processing Logs
-- 🔄 Retry Failed Requests
-- ⚙️ Configurable User-Agent
-- 🚀 Selenium Support
-- 🍜 BeautifulSoup Integration
+- 🔄 Automatic retries on connection errors and 5xx responses (client errors like 404 are not retried)
+- 🤖 Robots.txt awareness — disallowed pages are skipped automatically (can be turned off)
+- ⚙️ Configurable User-Agent, timeout and retry count
+- 🖥️ Modern PySide6 desktop interface with a progress bar and a live log
 
 ---
 
 ## 🛠️ Technologies
 
 - Python 3.13
-- PySide6
-- Requests
-- BeautifulSoup4
-- Selenium
-- Pandas
-- OpenPyXL
+- PySide6 (desktop interface)
+- Requests (HTTP)
+- lxml + cssselect (HTML parsing, CSS/XPath selection)
+- Pandas + OpenPyXL (CSV / Excel / JSON export)
+- pytest (automated tests)
+- PyInstaller (Windows `.exe` build)
 
 ---
 
 ## 📂 Project Structure
 
 ```
-WebScraperToolkit/
+Python Web Scraper/
 │
-├── src/
-├── docs/
-├── tests/
-├── assets/
-│   ├── images/
-│   └── screenshots/
+├── app.py                  # Entry point
+├── app.spec                # PyInstaller build spec
+├── core/
+│   ├── http_client.py      # Fetching (User-Agent, timeout, retries)
+│   ├── parser.py           # CSS/XPath extraction
+│   └── scraper.py          # Ties fetch + parse together, batch + robots.txt
+├── services/
+│   └── export_service.py   # CSV / Excel / JSON export
+├── gui/
+│   └── main_window.py      # PySide6 interface
+├── tests/                  # pytest unit tests
 ├── README.md
 ├── ROADMAP.txt
 ├── CHANGELOG.md
@@ -69,35 +70,6 @@ WebScraperToolkit/
 ├── requirements.txt
 └── .gitignore
 ```
-
----
-
-## 🚀 Roadmap
-
-Current version:
-
-```
-v0.1.0
-```
-
-Upcoming milestones:
-
-- Project foundation
-- GUI implementation
-- CSV export
-- Excel export
-- JSON export
-- Batch scraping
-- Selenium integration
-- v1.0 Release
-
-See **ROADMAP.txt** for detailed planning.
-
----
-
-## 📸 Screenshots
-
-Coming soon...
 
 ---
 
@@ -124,8 +96,43 @@ pip install -r requirements.txt
 Run the application
 
 ```bash
-python main.py
+python app.py
 ```
+
+---
+
+## 🚀 Usage
+
+1. Paste one or more URLs into the **URLs** box (one per line).
+2. Enter a **CSS selector** (e.g. `h2.title`) or switch to **XPath** (e.g. `//h2[@class='title']`).
+3. Optionally set an **Attribute** (e.g. `href`) to extract a link target instead of text.
+4. Pick an export **format** and output **folder**, then click **Scrape**.
+5. Results are saved as `scrape_results.csv` / `.xlsx` / `.json` in the chosen folder.
+
+---
+
+## 🧪 Tests
+
+```bash
+pip install pytest
+pytest tests -q
+```
+
+---
+
+## 🚀 Roadmap
+
+Current version: `v0.5.0` — core scraping engine, export, batch processing and the desktop GUI are done.
+
+Still planned:
+
+- Multi-page crawling (follow links)
+- Proxy support
+- Selenium integration (JavaScript-rendered pages)
+- Persisted project settings
+- Scheduled scraping
+
+See **ROADMAP.txt** for detailed planning.
 
 ---
 

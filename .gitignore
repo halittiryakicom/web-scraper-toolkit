@@ -1,6 +1,16 @@
-__pycache__/ 
-*.pyc 
-.venv/ 
-venv/ 
-.idea/ 
-.vscode/ 
+__pycache__/
+*.pyc
+.venv/
+venv/
+.idea/
+.vscode/
+
+# PyInstaller build output
+build/
+dist/
+
+# Output produced by running the scraper
+output/
+
+# Test artifacts
+.pytest_cache/

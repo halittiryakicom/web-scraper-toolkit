@@ -13,39 +13,39 @@
 
 ## 🌐 Core Features
 
-- [ ] Scrape a single webpage
-- [ ] CSS Selector support
-- [ ] XPath support
-- [ ] Custom User-Agent
-- [ ] Request timeout handling
-- [ ] Error handling
+- [x] Scrape a single webpage
+- [x] CSS Selector support
+- [x] XPath support
+- [x] Custom User-Agent
+- [x] Request timeout handling
+- [x] Error handling
 
 ---
 
 ## 📊 Export
 
-- [ ] CSV Export
-- [ ] Excel Export
-- [ ] JSON Export
+- [x] CSV Export
+- [x] Excel Export
+- [x] JSON Export
 
 ---
 
 ## ⚙️ Automation
 
-- [ ] Multiple URL processing
-- [ ] Batch scraping
-- [ ] Retry failed requests
+- [x] Multiple URL processing
+- [x] Batch scraping
+- [x] Retry failed requests
 - [ ] Scheduled scraping
 
 ---
 
 ## 🖥️ GUI (v0.5)
 
-- [ ] PySide6 interface
-- [ ] URL input
-- [ ] Progress bar
-- [ ] Log panel
-- [ ] Export options
+- [x] PySide6 interface
+- [x] URL input
+- [x] Progress bar
+- [x] Log panel
+- [x] Export options
 
 ---
 
@@ -54,9 +54,8 @@
 - [ ] Multi-page crawling
 - [ ] Proxy support
 - [ ] Selenium integration
-- [ ] BeautifulSoup integration
-- [ ] Robots.txt awareness
-- [ ] Project settings
+- [x] Robots.txt awareness
+- [ ] Project settings (persisted between runs)
 - [ ] Release v1.0
 
 ---
@@ -65,22 +64,23 @@
 
 ## 🔴 High Priority
 
-- [ ] Repository
-- [ ] README
-- [ ] Single page scraping
-- [ ] CSV Export
+- [x] Repository
+- [x] README
+- [x] Single page scraping
+- [x] CSV Export
 
 ## 🟠 Medium Priority
 
-- [ ] GUI
-- [ ] Excel Export
-- [ ] Multiple URLs
+- [x] GUI
+- [x] Excel Export
+- [x] Multiple URLs
 
 ## 🟢 Low Priority
 
 - [ ] Proxy
 - [ ] Selenium
 - [ ] Scheduler
+- [ ] Multi-page crawling
 
 ---
 

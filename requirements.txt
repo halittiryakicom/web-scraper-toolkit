@@ -4,6 +4,7 @@ requests>=2.32.0
 # HTML Parsing
 beautifulsoup4>=4.13.0
 lxml>=6.0.0
+cssselect>=1.2.0
 
 # Browser Automation
 selenium>=4.34.0
