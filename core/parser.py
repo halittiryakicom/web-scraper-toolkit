@@ -2,6 +2,9 @@
 
 from enum import Enum
 
+# lxml loads cssselect lazily inside .cssselect(); importing it here makes the
+# dependency explicit so PyInstaller bundles it and a missing install fails loudly.
+import cssselect  # noqa: F401
 from lxml import html as lxml_html
 from lxml.etree import XPathEvalError
 
