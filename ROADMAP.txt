@@ -1,89 +1,46 @@
-🚀 Python Web Scraper Roadmap (v1.0)
+🚀 Web Scraper Toolkit — Roadmap
+Last updated: 2026-09-30 · Current release: v0.5.0 MVP (Python / PySide6)
 
-## 🎯 MVP (v0.1)
+Status: [x] done · [ ] planned · (later) = parked until the .NET version
 
-- [x] Create GitHub repository
-- [x] Professional README
-- [x] MIT License
-- [x] .gitignore
-- [x] requirements.txt
-- [x] Initial project structure
+====================================================================
+✅ DONE
+====================================================================
+v0.1 – Project setup
+- [x] Repository, README, MIT license, .gitignore, requirements.txt, structure
 
----
-
-## 🌐 Core Features
-
-- [x] Scrape a single webpage
-- [x] CSS Selector support
-- [x] XPath support
-- [x] Custom User-Agent
-- [x] Request timeout handling
-- [x] Error handling
-
----
-
-## 📊 Export
-
-- [x] CSV Export
-- [x] Excel Export
-- [x] JSON Export
-
----
-
-## ⚙️ Automation
-
-- [x] Multiple URL processing
-- [x] Batch scraping
-- [x] Retry failed requests
-- [ ] Scheduled scraping
-
----
-
-## 🖥️ GUI (v0.5)
-
-- [x] PySide6 interface
-- [x] URL input
-- [x] Progress bar
-- [x] Log panel
-- [x] Export options
-
----
-
-## ⭐ v1.0
-
-- [ ] Multi-page crawling
-- [ ] Proxy support
-- [ ] Selenium integration
-- [x] Robots.txt awareness
-- [ ] Project settings (persisted between runs)
-- [ ] Release v1.0
-
----
-
-# 🎯 Priorities
-
-## 🔴 High Priority
-
-- [x] Repository
-- [x] README
+Core
 - [x] Single page scraping
-- [x] CSV Export
+- [x] CSS selector + XPath support, attribute extraction
+- [x] Custom User-Agent, request timeout, error handling
+- [x] Robots.txt awareness
 
-## 🟠 Medium Priority
+Export
+- [x] CSV / Excel / JSON export
 
-- [x] GUI
-- [x] Excel Export
-- [x] Multiple URLs
+Automation
+- [x] Multiple URLs (batch scraping)
+- [x] Retry failed requests
 
-## 🟢 Low Priority
+v0.5 – GUI
+- [x] PySide6 interface: URL input, progress bar, log panel, export options
 
-- [ ] Proxy
-- [ ] Selenium
-- [ ] Scheduler
-- [ ] Multi-page crawling
+v0.5.1 – Fix (2026-09-29)
+- [x] Packaged app: CSS selectors failed ("cssselect not installed") → cssselect bundled
 
----
+====================================================================
+🔜 NEXT — v1.0: .NET version (planned in Oct 2026, week 3)
+====================================================================
+Decision (2026-09-28): all portfolio projects move to .NET.
+- [ ] Scope + estimate for the .NET port (HTML parser, UI framework)
+- [ ] Feature parity with v0.5.1
+- [ ] Project settings persisted between runs
+- [ ] Release v1.0 on GitHub Releases
 
-# 📌 Main Goal
-
-"Extract structured data from websites quickly and reliably."
+====================================================================
+🧭 After v1.0 (backlog)
+====================================================================
+- [ ] Multi-page crawling (follow pagination / links)
+- [ ] Scheduled scraping
+- [ ] Proxy support
+- [ ] Headless browser support for JavaScript-heavy pages
